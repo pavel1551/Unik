@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Изучение JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать на страницу изучения JavaScript</h1>
+        <div id="welcome-message"></div>
+        <button onclick="getUserName()">Представьтесь</button>
+
+        <h2>О JavaScript</h2>
+        <p>JavaScript - это язык программирования, который используется для создания интерактивных элементов на веб-страницах. Он может быть использован для:</p>
+        <ul>
+            <li>Динамического изменения контента</li>
+            <li>Валидации форм</li>
+            <li>Создания анимаций</li>
+            <li>Общения с сервером (AJAX)</li>
+        </ul>
+        <p>JavaScript не подходит для:</p>
+        <ul>
+            <li>Работы с файлами на стороне клиента</li>
+            <li>Создания тяжелых вычислений на стороне клиента</li>
+        </ul>
+
+        <h2>Демонстрация задач</h2>
+        <a href="../Pract1/index.html"><button>Практическая работа №1</button></a>
+        <a href="../Pract2/index.html"><button>Практическая работа №2</button></a>
+
+        <h2>Тест по JavaScript</h2>
+        <button onclick="startTest()">Начать тест</button>
+        <div id="test-result"></div>
+
+        <h2>Заставка</h2>
+        <button onclick="showFullscreen()">Показать заставку</button>
+
+        <div id="fullscreen" onclick="hideFullscreen()">
+            <div id="fullscreen-content"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

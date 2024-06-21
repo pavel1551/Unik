@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+.array-item {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    display: inline-block;
+}
