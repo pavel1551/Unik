@@ -125,5 +125,5 @@ function task6() {
 }
 
 function redirectToHomepage() {
-    window.location.href = "index.html"; // URL главной страницы
+    window.location.href = "https://pavel1551.github.io/Unik/"; // URL главной страницы
 }
