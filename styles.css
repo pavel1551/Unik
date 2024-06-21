@@ -20,6 +20,7 @@ body {
         background-position: 100% 100%;
     }
 }
+
 .container {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* полупрозрачный белый фон контейнера */
@@ -31,8 +32,32 @@ body {
 }
 
 button {
-    margin: 5px;
-    padding: 10px 15px;
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    text-align: left;
+    padding-left: 20px;
 }
 
 #fullscreen {
@@ -51,4 +76,31 @@ button {
 
 #fullscreen-content {
     text-align: center;
+}
+
+.task-link {
+    text-decoration: none;
+    color: white;
+}
+
+.task-button {
+    display: block;
+    margin: 0 auto 10px;
+    padding: 15px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.task-button:hover {
+    background-color: #0056b3;
+}
+
+.task-button:focus {
+    outline: none;
 }
