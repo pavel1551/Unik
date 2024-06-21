@@ -19,31 +19,26 @@ function displayWelcomeMessage() {
     }
 }
 
-// Практическая работа №1
 function task1() {
-    // Демо из предыдущих практических работ
-    alert("Демонстрация задач из практической работы №1.");
+    window.location.href = "../Pract1/index.html";
 }
 
-// Практическая работа №2
 function task2() {
-    // Демо из предыдущих практических работ
-    alert("Демонстрация задач из практической работы №2.");
+    window.location.href = "../Pract2/index.html";
 }
 
-// Тест по JavaScript
 function startTest() {
     let questions = [
-        { question: "Что такое JavaScript?", answer: "Язык программирования" },
-        { question: "Для чего используется JavaScript?", answer: "Создание интерактивных элементов" },
-        { question: "Можно ли использовать JavaScript для валидации форм?", answer: "Да" },
-        { question: "Является ли JavaScript языком программирования на стороне сервера?", answer: "Нет" },
-        { question: "Можно ли с помощью JavaScript работать с файлами на клиенте?", answer: "Нет" },
-        { question: "Какой метод используется для вывода сообщений в консоль?", answer: "console.log" },
-        { question: "Как создать переменную в JavaScript?", answer: "let" },
-        { question: "Как объявить функцию в JavaScript?", answer: "function" },
-        { question: "Какой оператор используется для сравнения значений?", answer: "==" },
-        { question: "Какой метод используется для добавления элемента в конец массива?", answer: "push" }
+        { question: "Что такое JavaScript?", answers: ["Язык программирования", "ЯП"] },
+        { question: "Для чего используется JavaScript?", answers: ["Создание интерактивных элементов"] },
+        { question: "Можно ли использовать JavaScript для валидации форм?", answers: ["Да"] },
+        { question: "Является ли JavaScript языком программирования на стороне сервера?", answers: ["Нет"] },
+        { question: "Можно ли с помощью JavaScript работать с файлами на клиенте?", answers: ["Нет"] },
+        { question: "Какой метод используется для вывода сообщений в консоль?", answers: ["console.log"] },
+        { question: "Как создать переменную в JavaScript?", answers: ["let"] },
+        { question: "Как объявить функцию в JavaScript?", answers: ["function"] },
+        { question: "Какой оператор используется для сравнения значений?", answers: ["=="] },
+        { question: "Какой метод используется для добавления элемента в конец массива?", answers: ["push"] }
     ];
 
     let userAnswers = [];
@@ -51,21 +46,21 @@ function startTest() {
 
     questions.forEach((q, index) => {
         let answer = prompt(q.question);
-        userAnswers.push({ question: q.question, userAnswer: answer, correctAnswer: q.answer, isCorrect: answer === q.answer });
-        if (answer === q.answer) {
+        let isCorrect = q.answers.some(correctAnswer => correctAnswer.toLowerCase() === answer.toLowerCase());
+        userAnswers.push({ question: q.question, userAnswer: answer, correctAnswers: q.answers, isCorrect: isCorrect });
+        if (isCorrect) {
             score++;
         }
     });
 
     let result = `Ваш результат: ${score} из ${questions.length}\n`;
     userAnswers.forEach((ans, index) => {
-        result += `\nВопрос ${index + 1}: ${ans.question}\nВаш ответ: ${ans.userAnswer} - ${ans.isCorrect ? "Верно" : "Неверно"} (Правильный ответ: ${ans.correctAnswer})\n`;
+        result += `\nВопрос ${index + 1}: ${ans.question}\nВаш ответ: ${ans.userAnswer} - ${ans.isCorrect ? "Верно" : "Неверно"} (Правильные ответы: ${ans.correctAnswers.join(", ")})\n`;
     });
 
     document.getElementById('test-result').innerText = result;
 }
 
-// Заставка на весь экран
 function showFullscreen() {
     let userName = localStorage.getItem('userName') || "Гость";
     let today = new Date();
