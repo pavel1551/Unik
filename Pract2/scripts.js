@@ -114,3 +114,7 @@ function task11() {
     output.innerHTML += `<p>Число 2: ${num2}</p>`;
     output.innerHTML += `<p>Произведение: ${product}</p>`;
 }
+
+function redirectToHomepage() {
+    window.location.href = "https://pavel1551.github.io/Unik/"; // URL главной страницы
+}
