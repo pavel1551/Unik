@@ -123,3 +123,7 @@ function task6() {
         }
     }
 }
+
+function redirectToHomepage() {
+    window.location.href = "index.html"; // URL главной страницы
+}
